@@ -1,0 +1,35 @@
+language: rust
+sudo: false
+
+rust:
+  - stable
+
+cache:
+  - cargo
+
+before_install:
+  - (test -x "${HOME}/.cargo/bin/cargo-install-update" || cargo install cargo-update)
+  - (test -x "${HOME}/.cargo/bin/mdbook" || cargo install mdbook --vers "^0.2")
+  - cargo install-update -a
+
+before_script:
+  - chmod u+x ./tools/travis-ci/build-and-tag.bash
+
+script:
+  - ./tools/travis-ci/build-and-tag.bash
+
+before_deploy:
+  - cd "${TRAVIS_BUILD_DIR}"
+
+deploy:
+  - provider: pages
+    skip_cleanup: true
+    github_token: "${GITHUB_TOKEN}"
+    local_dir: ./build/html # relative to this file's containing directory
+    target_branch: gh-pages
+    on:
+      branch: master
+
+branches:
+  only:
+    - master

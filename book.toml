@@ -1,0 +1,8 @@
+[book]
+multilingual = false
+src = "src"
+title = "The OpenRA Book"
+authors = [ "Taryn Hill <taryn@phrohdoh.com>" ]
+
+[build]
+build-dir = "build/html"
