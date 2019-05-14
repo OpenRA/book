@@ -1,6 +1,6 @@
 # The OpenRA Book
 
-Read [the book's introduction](./src/README.md) to get an idea of what this book covers.
+Read [the book's introduction](./src/README.md) to get an idea of what thisbook covers.
 
 ## Contact Us
 
@@ -10,6 +10,10 @@ Read [the book's introduction](./src/README.md) to get an idea of what this book
 ## Requirements
 
 - [`mdbook`] version 0.2.x
+
+**NOTE**: macOS users will need to install `mdbook` via [`cargo`] since mdbook
+does not distribute macOS binaries. See [mdbook#installation] for more
+information.
 
 ## Build the book
 
@@ -74,8 +78,10 @@ suggestions or corrections!
 We can not translate the book because [`mdbook` doesn't support translations]
 yet.
 
-  [`mdbook`]: https://github.com/rust-lang-nursery/mdBook/
+  [`cargo`]: https://doc.rust-lang.org/cargo/
   [`mdbook` doesn't support translations]: https://github.com/rust-lang-nursery/mdBook/issues/5
-  [open pull requests]: https://github.com/OpenRA/book/pulls
+  [`mdbook`]: https://github.com/rust-lang-nursery/mdBook/
   [chat with us on Discord]: https://discord.openra.net
+  [mdbook#installation]: https://github.com/rust-lang-nursery/mdBook#installation
   [open an issue on GitHub]: https://github.com/OpenRA/book/issues/new
+  [open pull requests]: https://github.com/OpenRA/book/pulls
