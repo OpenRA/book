@@ -7,6 +7,18 @@ Read [the book's introduction](./src/README.md) to get an idea of what thisbook 
 - [chat with us on Discord]
 - [open an issue on GitHub]
 
+## License
+
+The OpenRA Book is under the CC-BY 4.0 license.
+
+You can find the full text in the [LICENSE] file.
+
+A non-legal human-friendly summary can be found
+[here](https://creativecommons.org/licenses/by/4.0/) on the Creative Commons
+website.
+
+That summary is not a substitute for the [LICENSE].
+
 ## Requirements
 
 - [`mdbook`] version 0.2.x
@@ -82,6 +94,7 @@ yet.
   [`mdbook` doesn't support translations]: https://github.com/rust-lang-nursery/mdBook/issues/5
   [`mdbook`]: https://github.com/rust-lang-nursery/mdBook/
   [chat with us on Discord]: https://discord.openra.net
+  [LICENSE]: ./LICENSE
   [mdbook#installation]: https://github.com/rust-lang-nursery/mdBook#installation
   [open an issue on GitHub]: https://github.com/OpenRA/book/issues/new
   [open pull requests]: https://github.com/OpenRA/book/pulls
