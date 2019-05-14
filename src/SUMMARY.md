@@ -7,6 +7,7 @@
     - [Installing OpenRA](./playing/installing.md)
     - [Strategy Guides](./playing/strategy-guides/README.md)
         - [Tiberian Dawn](./playing/strategy-guides/Tiberian-Dawn.md)
+        - [Dune 2000](./playing/strategy-guides/Dune-2000.md)
 
 - [Modding](./modding/README.md)
     - [Getting Started](./modding/getting-started/README.md)
