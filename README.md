@@ -1,6 +1,6 @@
 # The OpenRA Book
 
-Read [the book's introduction](./src/README.md) to get an idea of what thisbook covers.
+http://www.openra.net/book/
 
 ## Contact Us
 
