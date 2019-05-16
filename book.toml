@@ -6,3 +6,6 @@ authors = [ "Taryn Hill <taryn@phrohdoh.com>" ]
 
 [build]
 build-dir = "build/html"
+
+[output.html]
+default-theme = "coal"
