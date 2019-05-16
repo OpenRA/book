@@ -2,6 +2,8 @@
 
 http://www.openra.net/book/
 
+[![Build Status](https://travis-ci.org/OpenRA/book.png)](https://travis-ci.org/OpenRA/book)
+
 ## Contact Us
 
 - [chat with us on Discord]
