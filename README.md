@@ -1,6 +1,6 @@
 # The OpenRA Book
 
-http://www.openra.net/book/
+https://www.openra.net/book/
 
 [![Build Status](https://travis-ci.org/OpenRA/book.png)](https://travis-ci.org/OpenRA/book)
 
