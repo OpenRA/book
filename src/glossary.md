@@ -74,7 +74,7 @@ Conceptually a trait is simply a characteristic of an [_actor_](#actor), such as
 
 [Valued.cs][gh-valued.cs@0b0b82bd], for example, contains two [`class`][lang-csharp-class]es:
 - `ValuedInfo`
-    - A [_TraitInfo_](#trait-info)
+    - A [_TraitInfo_](#traitinfo)
 - `Valued`
     - A _Trait_ implementation
 
