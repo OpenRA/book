@@ -35,7 +35,9 @@ This file is what declares a directory as a mod, it is required.
 
 ### Asset
 
-This is a generic term that encompasses image files, audio files, container files (such as `.zip` or `.mix`), and basically anything else that isn't [_MiniYaml_](#miniyaml).
+This is a generic term that encompasses image files, audio files, container
+files (such as `.zip` or `.mix`), and basically anything else that isn't
+[_MiniYaml_](#miniyaml).
 
 ### Actor
 
@@ -43,7 +45,8 @@ An actor is the _entity_ part of the [_entity-component-system_][wp-ecs].
 
 Technically, an actor is a collection of [_trait_](#trait)s.
 
-In [the real-world example in chapter 2](./miniyaml/example.md) you can see the actor `E1` defined with the following traits:
+In [the real-world example in chapter 2](./miniyaml/example.md) you can see the
+actor `E1` defined with the following traits:
 
 - `Buildable`
 - `Valued`
@@ -52,35 +55,44 @@ In [the real-world example in chapter 2](./miniyaml/example.md) you can see the 
 Note that, for example, `Queue` (in that same example) _is not a trait_.
 It is a property of the `Buildable` trait.
 
-`Inherits` technically isn't a trait, it is a MiniYaml mechanism that is explained in the chapter 2 link above.
+`Inherits` technically isn't a trait, it is a MiniYaml mechanism that is
+explained in the chapter 2 link above.
 
 ### TraitInfo
 
-Technically a trait info is the _component_ part of the [_entity-component-system_][wp-ecs] architecture.
+Technically a trait info is the _component_ part of the
+[_entity-component-system_][wp-ecs] architecture.
 
 The properties of a _TraitInfo_ can be set in MiniYaml.
 
-Look at the linked actor definition and [Valued.cs][gh-valued.cs@0b0b82bd]'s `ValuedInfo` class together.
+Look at the linked actor definition and [Valued.cs][gh-valued.cs@0b0b82bd]'s
+`ValuedInfo` class together.
 
 Do you see how `ValuedInfo` has a `Cost` property that is of type `int`?
 
 Now back in the MiniYaml you'll find `Cost: 100`.
 
-That node is read by the engine (via the `FieldLoader` class, which will be covered in a future chapter) and the `Cost` property of `ValuedInfo` is set to `100`.
+That node is read by the engine (via the `FieldLoader` class, which will be
+covered in a future chapter) and the `Cost` property of `ValuedInfo` is set to
+`100`.
 
 ### Trait
 
-Conceptually a trait is simply a characteristic of an [_actor_](#actor), such as 
+Conceptually a trait is simply a characteristic of an [_actor_](#actor).
 
-[Valued.cs][gh-valued.cs@0b0b82bd], for example, contains two [`class`][lang-csharp-class]es:
+Let's look at [Valued.cs][gh-valued.cs@0b0b82bd], for example, which contains
+two [`class`][lang-csharp-class]es:
 - `ValuedInfo`
     - A [_TraitInfo_](#traitinfo)
 - `Valued`
     - A _Trait_ implementation
 
-Technically a trait is the _system_ part of the [_entity-component-system_][wp-ecs] architecture.
+Technically a trait is the _system_ part of the
+[_entity-component-system_][wp-ecs] architecture.
 
-Systems holds state and, potentially, interacts with other systems.
+Systems might:
+- hold state
+- interact with other systems
 
 ### Armament
 
