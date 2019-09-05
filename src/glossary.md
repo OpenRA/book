@@ -65,7 +65,7 @@ Technically a trait info is the _component_ part of the
 
 The properties of a _TraitInfo_ can be set in MiniYaml.
 
-Look at the linked actor definition and [Valued.cs][gh-valued.cs@0b0b82bd]'s
+Look at the linked actor definition and [Valued.cs][gh-valued.cs@1d106e71]'s
 `ValuedInfo` class together.
 
 Do you see how `ValuedInfo` has a `Cost` property that is of type `int`?
@@ -80,7 +80,7 @@ covered in a future chapter) and the `Cost` property of `ValuedInfo` is set to
 
 Conceptually a trait is simply a characteristic of an [_actor_](#actor).
 
-Let's look at [Valued.cs][gh-valued.cs@0b0b82bd], for example, which contains
+Let's look at [Valued.cs][gh-valued.cs@1d106e71], for example, which contains
 two [`class`][lang-csharp-class]es:
 - `ValuedInfo`
     - A [_TraitInfo_](#traitinfo)
@@ -91,8 +91,8 @@ Technically a trait is the _system_ part of the
 [_entity-component-system_][wp-ecs] architecture.
 
 Systems might:
-- hold state
-- interact with other systems
+- hold state (ex. "Current HP is 43")
+- interact with other systems (ex. "I just got healed, play a healing animation")
 
 ### Armament
 
@@ -103,5 +103,5 @@ This is another word for "weapon."
   [wp-cnc95]: https://en.wikipedia.org/wiki/Command_%26_Conquer_(1995_video_game)
   [wp-red-alert]: https://en.wikipedia.org/wiki/Command_%26_Conquer:_Red_Alert
   [wp-dune2k]: https://en.wikipedia.org/wiki/Dune_2000
-  [gh-valued.cs@0b0b82bd]: https://github.com/OpenRA/OpenRA/blob/0b0b82bd/OpenRA.Mods.Common/Traits/Valued.cs
+  [gh-valued.cs@1d106e71]: https://github.com/OpenRA/OpenRA/blob/1d106e71/OpenRA.Mods.Common/Traits/Valued.cs
   [lang-csharp-class]: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/classes
