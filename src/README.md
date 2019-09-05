@@ -66,7 +66,7 @@ Truly there is no wrong way to read this book: if you want to skip ahead, go
 for it! You may have to jump back to earlier chapters, or get help from the
 community, if you experience confusion. But do whatever works for you.
 
-You can dive in by reading [the terminology page][page-terms], then
+You can dive in by reading [the glossary page][page-terms], then
 [the _Getting Started_ chapter for modders][modding-getting-started] right
 now!
 
@@ -86,9 +86,9 @@ playing, etc.
   [openra-reddit]: https://reddit.com/r/openra
   [openra-twitter]: https://twitter.com/openra
   [openra-website]: https://www.openra.net
-  [page-terms]: ./terminology.md
+  [page-terms]: ./glossary.md
   [playing]: ./playing/index.html
-  [term-mod]: ./terminology.md#mod
+  [term-mod]: ./glossary.md#mod
   [wp-cnc95]: https://en.wikipedia.org/wiki/Command_%26_Conquer_(1995_video_game)
   [wp-dotnet-framework]: https://en.wikipedia.org/wiki/.NET_Framework
   [wp-dune2k]: https://en.wikipedia.org/wiki/Dune_2000

@@ -1,7 +1,7 @@
 # Summary
 
 [Introduction](./README.md)
-[Terminology](./terminology.md)
+[Glossary](./glossary.md)
 
 - [Playing](./playing/README.md)
     - [Installing OpenRA](./playing/installing.md)

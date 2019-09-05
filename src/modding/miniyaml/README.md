@@ -12,6 +12,6 @@ By the end of this chapter it is expected that you will:
 
 2) [Understand A Real-World Example][page-example]
 
-  [term/miniyaml]: ../../terminology.md#miniyaml
+  [term/miniyaml]: ../../glossary.md#miniyaml
   [page-syntax]: ./syntax.md
   [page-example]: ./example.md
