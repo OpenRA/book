@@ -3,7 +3,7 @@ This is an automatically generated listing of the new Lua map scripting API, gen
 OpenRA allows custom maps and missions to be scripted using Lua 5.1.
 These scripts run in a sandbox that prevents access to unsafe functions (e.g. OS or file access), and limits the memory and CPU usage of the scripts.
 
-You can access this interface by adding the [LuaScript](Traits#luascript) trait to the world actor in your map rules (note, you must replace the spaces in the snippet below with a single tab for each level of indentation):
+You can access this interface by adding the [LuaScript](traits.html#luascript) trait to the world actor in your map rules (note, you must replace the spaces in the snippet below with a single tab for each level of indentation):
 ```
 Rules:
 	World:
