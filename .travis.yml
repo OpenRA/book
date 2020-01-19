@@ -5,18 +5,15 @@ rust:
   - stable
 
 cache:
+  - rust
   - cargo
+  - mdbook
 
 before_install:
-  - (test -x "${HOME}/.cargo/bin/cargo-install-update" || cargo install cargo-update)
-  - (test -x "${HOME}/.cargo/bin/mdbook" || cargo install mdbook --vers "^0.2")
-  - cargo install-update -a
-
-before_script:
-  - chmod u+x ./tools/travis-ci/build-and-tag.bash
+  - (test -x "${HOME}/.cargo/bin/mdbook" || cargo install mdbook --no-default-features --features output --vers "^0.2")
 
 script:
-  - ./tools/travis-ci/build-and-tag.bash
+  - mdbook build
 
 before_deploy:
   - cd "${TRAVIS_BUILD_DIR}"
