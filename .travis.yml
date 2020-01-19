@@ -1,5 +1,5 @@
 language: rust
-sudo: false
+os: linux
 
 rust:
   - stable
@@ -21,7 +21,7 @@ before_deploy:
 deploy:
   - provider: pages
     skip_cleanup: true
-    github_token: "${GITHUB_TOKEN}"
+    token: "${GITHUB_TOKEN}"
     local_dir: ./build/html # relative to this file's containing directory
     target_branch: gh-pages
     on:
