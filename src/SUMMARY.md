@@ -19,6 +19,7 @@
     - [Map Making](./modding/map-making/README.md)
         - [Map Editor 101](./modding/map-making/editor.md)
         - [Map Scripting 101](./modding/map-making/scripting.md)
+    - [Using png artwork](./modding/pngartwork/pngartwork.md)
     - [Campaign Creation](./modding/campaigns/README.md)
         - [What Isn't Yet Possible](./modding/campaigns/what-isnt-yet-possible.md)
     - [Utility](./modding/utility/README.md)
