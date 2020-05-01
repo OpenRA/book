@@ -39,6 +39,8 @@ $ mdbook build
 
 The output will be in the `build/html/` subdirectory.
 
+Using `mdbook watch` will build the book automatically each time a Markdown file in the `src` directory is changed.
+
 ## View the built book
 
 Open it in your web browser of choice:
