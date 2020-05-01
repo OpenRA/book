@@ -1,6 +1,6 @@
 # The OpenRA Book
 
-https://www.openra.net/book/
+You can find the built book at https://www.openra.net/book/
 
 [![Build Status](https://travis-ci.org/OpenRA/book.png)](https://travis-ci.org/OpenRA/book)
 
