@@ -19,7 +19,7 @@ documentation, etc.
 
 ### MiniYaml
 
-A custom file format used for many things in OpenRA.
+A custom textual file format used for many things in OpenRA.
 
 These files are what the engine reads to, for example:
 - determine which [mod](#mod)(s) are installed
