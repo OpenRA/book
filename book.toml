@@ -2,7 +2,7 @@
 multilingual = false
 src = "src"
 title = "The OpenRA Book"
-authors = [ "Taryn Hill <taryn@phrohdoh.com>" ]
+authors = [ "Taryn Hill <taryn@phrohdoh.com>", "abcdefg30 <alphabet@streber24.de>" ]
 
 [build]
 build-dir = "build/html"
