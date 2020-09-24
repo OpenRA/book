@@ -22,7 +22,6 @@
         - [Map Scripting 101](./modding/map-making/scripting.md)
     - [Using png artwork](./modding/pngartwork/pngartwork.md)
     - [Campaign Creation](./modding/campaigns/README.md)
-        - [What Isn't Yet Possible](./modding/campaigns/what-isnt-yet-possible.md)
     - [Utility](./modding/utility/README.md)
         - [Mod & Map Linting](./modding/utility/linting.md)
 
