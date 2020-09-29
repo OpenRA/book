@@ -1,1 +1,1 @@
-# Map Scripting 101
+# Scripting
