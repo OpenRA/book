@@ -45,7 +45,7 @@ An actor is the _entity_ part of the [_entity-component-system_][wp-ecs].
 
 Technically, an actor is a collection of [_trait_](#trait)s.
 
-In [the real-world example in chapter 2](./miniyaml/example.md) you can see the
+In [the real-world example in chapter 2](./modding/miniyaml/example.md) you can see the
 actor `E1` defined with the following traits:
 
 - `Buildable`
