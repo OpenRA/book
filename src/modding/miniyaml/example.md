@@ -48,16 +48,12 @@ This node _is indented 1 level more than `E1`_ so it is a child of the `E1` node
 should be inserted right where this node is (so this `Inherits: ^Solder` node
 would be replaced with `^Soldier`'s tree), effectively merging the two trees.
 
-Also note that `^` _is not special_, it is purely convention that indicates
-the referenced node is a "template", meaning it is only meant to be inherited
-from, not used in any other way.
+Also note that `^` indicates the referenced definition is a
+template/partial/abstract, meaning it can only be inherited from, not used
+in any other way.
 
 If that doesn't make sense now that is fine! We will come back to this in a
 future chapter.
-
-<!--
-	TODO: Verify that keys starting with `^` aren't given special treatment
--->
 
 ---
 
