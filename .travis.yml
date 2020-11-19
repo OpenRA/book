@@ -1,5 +1,6 @@
 language: rust
 os: linux
+dist: xenial
 
 rust:
   - stable
@@ -24,6 +25,7 @@ deploy:
     github_token: $GITHUB_TOKEN
     local_dir: ./build/html # relative to this file's containing directory
     target_branch: gh-pages
+    strategy: git
     on:
       branch: master
 
