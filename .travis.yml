@@ -21,7 +21,7 @@ before_deploy:
 deploy:
   - provider: pages
     skip_cleanup: true
-    token: "${GITHUB_TOKEN}"
+    github_token: $GITHUB_TOKEN
     local_dir: ./build/html # relative to this file's containing directory
     target_branch: gh-pages
     on:
