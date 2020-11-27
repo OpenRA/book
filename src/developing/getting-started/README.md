@@ -1,7 +1,7 @@
 # Chapter 1: Getting Started
 
 <!--
-TODO: Rewrite this chapter to use the SDK
+TODO: Rewrite this chapter to contain useful information or act as introduction
 -->
 
 ## Chapter Goals
@@ -16,12 +16,5 @@ By the end of this chapter it is expected that you will:
 
 2) [Run the _Red Alert_ mod][page-run-ra]
 
-3) Celebrate!
-
----
-
-You are now ready to read [the next chapter][next-ch]!
-
   [page-cloning]: ./cloning.md
   [page-run-ra]: ./run-ra.md
-  [next-ch]: ../miniyaml/index.html

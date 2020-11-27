@@ -59,14 +59,7 @@ reward yourself.
   of the last command you ran in your terminal to another mod's ID (such as
   `ts`) and see what happens
 
----
-
-When you're satisfied with your skills on the battlefield (or if you decided
-not to play any games right now) continue on to [the next chapter][next-ch]
-where we'll cover the [_MiniYaml_][term-miniyaml] format.
-
   [term-miniyaml]: ../glossary.md#miniyaml
-  [next-ch]: ../miniyaml/index.html
   [img-install-content-prompt]: ./images/RedAlert_InstallContentPrompt.png
   [img-quick-install-package-progress]: ./images/RedAlert_QuickInstallPackageProgress.png
   [img-ra-main-menu]: ./images/RedAlert_MainMenu.png

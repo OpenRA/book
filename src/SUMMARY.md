@@ -11,9 +11,7 @@
         - [Dune 2000](./playing/strategy-guides/Dune-2000.md)
 
 - [Modding](./modding/README.md)
-    - [Getting Started](./modding/getting-started/README.md)
-        - [Clone The Source Code](./modding/getting-started/cloning.md)
-        - [Run The _Red Alert_ Mod](./modding/getting-started/run-ra.md)
+    - [Getting Started](./modding/getting-started.md)
     - [MiniYaml](./modding/miniyaml/README.md)
         - [Syntax Basics](./modding/miniyaml/syntax.md)
         - [A Real-World Example](./modding/miniyaml/example.md)
@@ -28,3 +26,6 @@
         - [Mod & Map Linting](./modding/utility/linting.md)
 
 - [Developing](./developing/README.md)
+    - [Getting Started](./developing/getting-started/README.md)
+        - [Clone The Source Code](./developing/getting-started/cloning.md)
+        - [Run The _Red Alert_ Mod](./developing/getting-started/run-ra.md)
