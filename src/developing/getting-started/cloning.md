@@ -9,7 +9,7 @@
 
 - Go to [the OpenRA engine's source code on GitHub][gh-openra-engine]
 
-- Click the green "clone or download" button
+- Click the green "Code" button
   - If the modal has the text "Clone with HTTPS" now would be a good time to
     [configure GitHub access via SSH][gh-ssh-setup], then redo this step
 
