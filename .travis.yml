@@ -11,7 +11,7 @@ cache:
   - mdbook
 
 before_install:
-  - (test -x "${HOME}/.cargo/bin/mdbook" || cargo install mdbook --no-default-features --features output --vers "^0.2")
+  - (test -x "${HOME}/.cargo/bin/mdbook" || cargo install mdbook --no-default-features --features output --vers "^0.4")
 
 script:
   - mdbook build

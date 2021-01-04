@@ -23,7 +23,7 @@ That summary is not a substitute for the [LICENSE].
 
 ## Requirements
 
-- [`mdbook`] version 0.2.x
+- [`mdbook`] version 0.4.x
 
 **NOTE**: macOS users will need to install `mdbook` via [`cargo`] since mdbook
 does not distribute macOS binaries. See [mdbook#installation] for more
