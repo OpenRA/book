@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Dune 2000 - The OpenRA Book</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="coal">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = "coal";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li class="affix"><a href="../../index.html">Introduction</a></li><li class="affix"><a href="../../glossary.html">Glossary</a></li><li><a href="../../playing/index.html"><strong aria-hidden="true">1.</strong> Playing</a></li><li><ol class="section"><li><a href="../../playing/installing.html"><strong aria-hidden="true">1.1.</strong> Installing OpenRA</a></li><li><a href="../../playing/game-content.html"><strong aria-hidden="true">1.2.</strong> Game Content</a></li><li><a href="../../playing/strategy-guides/index.html"><strong aria-hidden="true">1.3.</strong> Strategy Guides</a></li><li><ol class="section"><li><a href="../../playing/strategy-guides/Tiberian-Dawn.html"><strong aria-hidden="true">1.3.1.</strong> Tiberian Dawn</a></li><li><a href="../../playing/strategy-guides/Dune-2000.html" class="active"><strong aria-hidden="true">1.3.2.</strong> Dune 2000</a></li></ol></li></ol></li><li><a href="../../modding/index.html"><strong aria-hidden="true">2.</strong> Modding</a></li><li><ol class="section"><li><a href="../../modding/getting-started.html"><strong aria-hidden="true">2.1.</strong> Getting Started</a></li><li><a href="../../modding/miniyaml/index.html"><strong aria-hidden="true">2.2.</strong> MiniYaml</a></li><li><ol class="section"><li><a href="../../modding/miniyaml/syntax.html"><strong aria-hidden="true">2.2.1.</strong> Syntax Basics</a></li><li><a href="../../modding/miniyaml/example.html"><strong aria-hidden="true">2.2.2.</strong> A Real-World Example</a></li></ol></li><li><a href="../../modding/map-making/index.html"><strong aria-hidden="true">2.3.</strong> Map Making</a></li><li><ol class="section"><li><a href="../../modding/map-making/editor.html"><strong aria-hidden="true">2.3.1.</strong> Editor</a></li><li><a href="../../modding/map-making/format.html"><strong aria-hidden="true">2.3.2.</strong> Format</a></li><li><a href="../../modding/map-making/custom-rules.html"><strong aria-hidden="true">2.3.3.</strong> Custom Rules</a></li><li><a href="../../modding/map-making/scripting.html"><strong aria-hidden="true">2.3.4.</strong> Scripting</a></li></ol></li><li><a href="../../modding/pngartwork/pngartwork.html"><strong aria-hidden="true">2.4.</strong> Using png artwork</a></li><li><a href="../../modding/campaigns/index.html"><strong aria-hidden="true">2.5.</strong> Campaign Creation</a></li><li><a href="../../modding/utility/index.html"><strong aria-hidden="true">2.6.</strong> Utility</a></li><li><ol class="section"><li><a href="../../modding/utility/linting.html"><strong aria-hidden="true">2.6.1.</strong> Mod &amp; Map Linting</a></li></ol></li></ol></li><li><a href="../../developing/index.html"><strong aria-hidden="true">3.</strong> Developing</a></li><li><ol class="section"><li><a href="../../developing/getting-started/index.html"><strong aria-hidden="true">3.1.</strong> Getting Started</a></li><li><ol class="section"><li><a href="../../developing/getting-started/cloning.html"><strong aria-hidden="true">3.1.1.</strong> Clone The Source Code</a></li><li><a href="../../developing/getting-started/run-ra.html"><strong aria-hidden="true">3.1.2.</strong> Run The Red Alert Mod</a></li></ol></li></ol></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                        </div>
+
+                        <h1 class="menu-title">The OpenRA Book</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>It may be hard for new players to see the difference between the 3 houses in Dune 2000 because the houses share so many units in common. The main differences between the houses are a) their unique units and b) their respective combat tanks. The unique traits of each house are listed below.</p>
+<a class="header" href="#house-atreides" id="house-atreides"><h2>House Atreides</h2></a>
+<p>Atreides's fighting style is to use long-range units with reasonable speed and maneuverability.</p>
+<p>Atreides' unique units:</p>
+<ul>
+<li><strong>Grenadier</strong> Grenadiers are an infantry artillery unit which are strong against buildings. They have a chance to explode on death, so don't group them together.</li>
+<li><strong>Atreides Combat Tank</strong> The Atreides combat tank has medium armor and speed. It is not as quick as Ordos ones, but not as armored as Harkonnen ones either.</li>
+<li><strong>Sonic Tank</strong> The Atreides' other unique vehicle is the sonic tank. Building the Ix Research Center unlocks this unit. Its weapon is long range and quite powerful, but the tank itself has a relatively low health. Use its superior range to keep it away from enemy units. Note: It cannot be bought from the starport.</li>
+<li><strong>Fremen</strong> Once you get a palace, you can build the fremen infantry unit. They are invisible and have a machine gun, as well as a rocket launcher. Note: Cloaked units can be detected by turrets and other infantry.</li>
+<li><strong>Airstrike</strong> The Atreides also get the airstrike support power after building and upgrading the High Tech Factory. Airstrikes are faster than missiles, and so can be used to attack large groups of enemy units.</li>
+</ul>
+<a class="header" href="#house-harkonnen" id="house-harkonnen"><h2>House Harkonnen</h2></a>
+<p>Harkonnen's fighting style is to use slow but tough units.</p>
+<p>Harkonnen's unique units:</p>
+<ul>
+<li><strong>Sardaukar</strong> These powerful heavy troopers have a machine gun that's effective against infantry, and a rocket launcher for vehicles. Building a High Tech Factory unlocks this unit.</li>
+<li><strong>Harkonnen Combat Tank</strong> The Harkonnen Combat Tank's advantage is its toughness. It has more hitpoints than other tanks. This comes at the expense of having slower movement, turn and fire speed.</li>
+<li><strong>Devastator</strong> The Devastator tank has heavy armor and a very powerful plasma cannon. It is also very slow. Building the Ix Research Center unlocks this unit.</li>
+<li><strong>Death Hand Missile</strong> After building the Harkonnen Palace, you get the ability to launch the Death Hand Missile anywhere on the map. It takes some time to arrive at its destination, so it is best suited for destroying enemy structures.</li>
+</ul>
+<a class="header" href="#house-ordos" id="house-ordos"><h2>House Ordos</h2></a>
+<p>The Ordos rely on hit-and-run tactics with fast and stealth units. In the late-game they use specialist units like the deviator (which can turn enemy units to your side) and the saboteur which can destroy enemy buildings.</p>
+<p>Ordos' unique units:</p>
+<ul>
+<li><strong>Raider Trike</strong> The raider trike replaces the standard Trike for Ordos. It is a powerful early-game unit, which maintains relevance throughout the game. It costs $300 instead of $250, but its advantages are well worth the cost. It is faster than regular trikes, and its gun does far more damage. The Raider Trike is powerful enough that it can be used early-game to harass an opponent's harvesters, despite their heavy armor. Raider trikes can hold their own against longer-range Quads, as long as they can get close.</li>
+<li><strong>Stealth Raider Trike</strong> Once you build a High-Tech Factory, you can build a cloaked raider trike for $400. It can ambush enemy units and then quickly retreat to safety. A large group of stealth raiders can be effective at ambushing harvesters or sneaking into an enemy base. Note: Cloaked units can be detected by turrets and infantry.</li>
+<li><strong>Ordos Combat Tank</strong> The Ordos combat tank's advantage is its speed. It has faster movement, turn and fire speed.  The Ordos tank's high speed means it can move in a group with other fast units like trikes and quads, allowing you to avoid artillery fire, attack vulnerable targets (such as artillery or harvesters), and then retreat before the enemy can organize a counterattack. But they have less hitpoints than other factions' Combat Tanks.</li>
+<li><strong>Deviator</strong> The Deviator fires rockets which give you temporary control of whatever units it hits. You wreak havoc on large formations by turning your opponent's units against each other. Building the Ix Research Center unlocks this unit.</li>
+<li><strong>Saboteur</strong> This is a commando unit that can be used to demolish enemy buildings quickly. Building a Palace unlocks it.</li>
+</ul>
+<a class="header" href="#shared-units" id="shared-units"><h2>Shared Units</h2></a>
+<ul>
+<li><strong>Light Infantry</strong> Light Infantries are basic infantry armed with automatic rifles. They are good vs. infantry.</li>
+<li><strong>Trooper</strong> Troopers are infantry armed with a rocket launcher. They are good vs. tanks and vehicles.</li>
+<li><strong>Engineer</strong> Engineers can capture enemy structures when they enter them. Defensive structures are not captureable.</li>
+<li><strong>Thumper Infantry</strong> Thumper Infantries can be deployed on a sand area to take attention of the worms there. You can deploy them on an empty place to keep sandworms away from your Harvesters or to enemy Spice to make them eat enemy Harvesters insted.</li>
+<li><strong>Trike</strong> Trikes are fast scouts which are very effective against infantry. They can also be fairly effective against quads and artillery units.</li>
+<li><strong>Quad</strong> Quads are built at the Light Factory, and unlocked by upgrading it. It has dual missile launcher with a moderate range which are effective against vehicles and tanks. Quads are somewhat effective against buildings, and poor versus infantry.</li>
+<li><strong>Harvester</strong> Harvesters collects Spice and carry them to Refinery to process them. A Harvester is given with a Carryall when a Refinery is built and additional Harvesters can be build from Heavy Factories. They have good armor to protect them. A Harvester can carry 700$ worth of Spice.</li>
+<li><strong>Siege Tank</strong> The Siege Tank is built at the Heavy Factory, and unlocked by upgrading it. It is somewhere between a tank and artillery, and its artillery shell has a medium-long range of 5 and a half cell. It has heavy armor to protect it from light machine gun fire, but still has much less health than combat tanks. Its weapon is very effective against infantry and structures. It is good against light vehicles, and but not so well against tanks.</li>
+<li><strong>Missile Tank</strong> The Missile Tank is built at the Heavy Factory, and is unlocked by the Ix Research Center. It has a range of 6. It fires volleys of 2 missiles. The rockets do excellent damage vs. tanks, good damage vs. vehicles, and moderate damage vs. turrets and buildings. They are not much good vs. infantry. Ordos can't build Missile Tanks from Heavy Factory but only buy from Starport.</li>
+<li><strong>Carryall</strong> Carryalls are automatic aircraft that carry Harvester between Refineries and Spice. It also carries damaged vehicles to Repair Pad when units ordered to.</li>
+</ul>
+<a class="header" href="#build-order" id="build-order"><h2>Build Order</h2></a>
+<p>In Dune 2000 you need to build Concrete Slabs before placing your buildings or they start with half health and will be damaged to that point over time even if you repair it. But placing them also may slow you down a little bit. Most effective way to use Concrete is to place them below Wind Traps as they provide less power if damaged and not the rest if you are planning to rush an attack. If you plan to turtle concreting everthing is a better option.</p>
+<p><img src="https://image.ibb.co/bT1twb/171227_dunewiki_power.png" alt="Four Concrete Slabs needed to power a Wind Trap at 100 Percent" /></p>
+<p>When teching up there are some ways you can go with. Barracks can be directly built after Wind Trap. But you may wanna go with a Refinery first if you want a better economy. After Refinery, Heavy Factory and Light Factory can be built. Construction Yard, Barracks, Light and Heavy Factory can be upgraded in order to enable more advanced units and structures. You can select to build a Light Factory if you wanna do rushes, especially if you are Ordos as they have Raiders instead of Trikes. Or you can build a Heavy Factory to build additional Harvesters and Tanks.</p>
+<p>Outpost is available after Barracks and allows you to see the Radar. It also enables some other buildings, but some of those requires other buildings too. Outpost alone only enables High-Tech Factory. Which allows you to build Carryalls, in order to carry your Harvesters between Refineries and Spice. Atreides can also get Airstrike by upgrading the High-Tech Factory. Last thing High-Tech Factory does is enabling Grenadiers for Atreides, Sardaukars for Harkonnen and Stealth Raider for Ordos.</p>
+<p>Heavy Factory Upgrade enables Repair Pad, which you can use to repair your vehicles and tanks. It also enables MCV, which can be deployed into additional Construction Yards to expland your base.</p>
+<p>Outpost and Heavy Factory enable Starport. With a Starport, you can get some units with a higher cost but with a quicker speed. Units you can build from Starport are Trike, Quad, Harvester, Combat Tank, Siege Tank, MCV, Missile Tank and Carryall. Ordos can buy Missile Tank from Starport even tho they can't build it. But they can't buy Raider but Trike instead.</p>
+<p>Outpost and Heavy Factory again also enable Ix Research Center. Which enables side specific advanced vehicles, Missile Tank and Palace. Missile Tank is only available for Atreides and Harkonnen, Ordos doesn't have it. Palaces also enable different units for each side.</p>
+<p>There are 3 defensive structures on Dune 2000. Wall, Gun Turret and Rocket Turret. Walls and Gun Turrets are available after Barracks. Walls can block enemy units from entering your base, it also blocks the fire of Combat Tanks and Harkonnen Devastators. Gun Turrets are good vs. vehicles. Rocket Turrets require Construction Yard Upgrade and Outpost. They are also good vs. vehicles but worse vs. infantry when compared to Gun Turrets. They can also attack air.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../playing/strategy-guides/Tiberian-Dawn.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../modding/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../../playing/strategy-guides/Tiberian-Dawn.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../../modding/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

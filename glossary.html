@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Glossary - The OpenRA Book</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="coal">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "coal";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li class="affix"><a href="index.html">Introduction</a></li><li class="affix"><a href="glossary.html" class="active">Glossary</a></li><li><a href="playing/index.html"><strong aria-hidden="true">1.</strong> Playing</a></li><li><ol class="section"><li><a href="playing/installing.html"><strong aria-hidden="true">1.1.</strong> Installing OpenRA</a></li><li><a href="playing/game-content.html"><strong aria-hidden="true">1.2.</strong> Game Content</a></li><li><a href="playing/strategy-guides/index.html"><strong aria-hidden="true">1.3.</strong> Strategy Guides</a></li><li><ol class="section"><li><a href="playing/strategy-guides/Tiberian-Dawn.html"><strong aria-hidden="true">1.3.1.</strong> Tiberian Dawn</a></li><li><a href="playing/strategy-guides/Dune-2000.html"><strong aria-hidden="true">1.3.2.</strong> Dune 2000</a></li></ol></li></ol></li><li><a href="modding/index.html"><strong aria-hidden="true">2.</strong> Modding</a></li><li><ol class="section"><li><a href="modding/getting-started.html"><strong aria-hidden="true">2.1.</strong> Getting Started</a></li><li><a href="modding/miniyaml/index.html"><strong aria-hidden="true">2.2.</strong> MiniYaml</a></li><li><ol class="section"><li><a href="modding/miniyaml/syntax.html"><strong aria-hidden="true">2.2.1.</strong> Syntax Basics</a></li><li><a href="modding/miniyaml/example.html"><strong aria-hidden="true">2.2.2.</strong> A Real-World Example</a></li></ol></li><li><a href="modding/map-making/index.html"><strong aria-hidden="true">2.3.</strong> Map Making</a></li><li><ol class="section"><li><a href="modding/map-making/editor.html"><strong aria-hidden="true">2.3.1.</strong> Editor</a></li><li><a href="modding/map-making/format.html"><strong aria-hidden="true">2.3.2.</strong> Format</a></li><li><a href="modding/map-making/custom-rules.html"><strong aria-hidden="true">2.3.3.</strong> Custom Rules</a></li><li><a href="modding/map-making/scripting.html"><strong aria-hidden="true">2.3.4.</strong> Scripting</a></li></ol></li><li><a href="modding/pngartwork/pngartwork.html"><strong aria-hidden="true">2.4.</strong> Using png artwork</a></li><li><a href="modding/campaigns/index.html"><strong aria-hidden="true">2.5.</strong> Campaign Creation</a></li><li><a href="modding/utility/index.html"><strong aria-hidden="true">2.6.</strong> Utility</a></li><li><ol class="section"><li><a href="modding/utility/linting.html"><strong aria-hidden="true">2.6.1.</strong> Mod &amp; Map Linting</a></li></ol></li></ol></li><li><a href="developing/index.html"><strong aria-hidden="true">3.</strong> Developing</a></li><li><ol class="section"><li><a href="developing/getting-started/index.html"><strong aria-hidden="true">3.1.</strong> Getting Started</a></li><li><ol class="section"><li><a href="developing/getting-started/cloning.html"><strong aria-hidden="true">3.1.1.</strong> Clone The Source Code</a></li><li><a href="developing/getting-started/run-ra.html"><strong aria-hidden="true">3.1.2.</strong> Run The Red Alert Mod</a></li></ol></li></ol></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                        </div>
+
+                        <h1 class="menu-title">The OpenRA Book</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#glossary" id="glossary"><h1>Glossary</h1></a>
+<a class="header" href="#mod" id="mod"><h3>Mod</h3></a>
+<p>The engine has a concept called &quot;mod&quot;s which are, essentially, a collection of
+<a href="#asset"><em>asset</em></a> and <a href="#miniyaml"><em>MiniYaml</em></a> files.</p>
+<p>In most cases, OpenRA-based games will have a single &quot;mod.&quot;
+Think of this in the context of the Tiberian Sun you could previously buy
+that included the Firestorm expansion.
+That would be a case of multiple &quot;mod&quot;s in a single game.</p>
+<p>Note that &quot;mod&quot; is in quotes because you're actually working on <em>games</em>
+but OpenRA's history is tied to the 1st generation
+<a href="https://en.wikipedia.org/wiki/Westwood_Studios">Westwood Studios</a> RTSes (<a href="https://en.wikipedia.org/wiki/Command_%26_Conquer_(1995_video_game)">Tiberian Dawn</a>,
+<a href="https://en.wikipedia.org/wiki/Command_%26_Conquer:_Red_Alert">Red Alert</a>, and <a href="https://en.wikipedia.org/wiki/Dune_2000">Dune 2000</a>) which were modified by
+players so the term &quot;mod&quot; is used throughout the OpenRA codebase,
+documentation, etc.</p>
+<a class="header" href="#miniyaml" id="miniyaml"><h3>MiniYaml</h3></a>
+<p>A custom textual file format used for many things in OpenRA.</p>
+<p>These files are what the engine reads to, for example:</p>
+<ul>
+<li>determine which <a href="#mod">mod</a>(s) are installed</li>
+<li>locate <a href="#asset">asset</a> files</li>
+<li>determine stats for different unit/building/etc. types</li>
+<li>build the UIs used in-game</li>
+</ul>
+<a class="header" href="#manifest" id="manifest"><h3>Manifest</h3></a>
+<p>The <code>mod.yaml</code> <a href="#miniyaml"><em>MiniYaml</em></a> file in the root of each <a href="#mod">mod</a>.</p>
+<p>This file is what declares a directory as a mod, it is required.</p>
+<a class="header" href="#asset" id="asset"><h3>Asset</h3></a>
+<p>This is a generic term that encompasses image files, audio files, container
+files (such as <code>.zip</code> or <code>.mix</code>), and basically anything else that isn't
+<a href="#miniyaml"><em>MiniYaml</em></a>.</p>
+<a class="header" href="#actor" id="actor"><h3>Actor</h3></a>
+<p>An actor is the <em>entity</em> part of the <a href="https://en.wikipedia.org/wiki/Entity_component_system"><em>entity-component-system</em></a>.</p>
+<p>Technically, an actor is a collection of <a href="#trait"><em>trait</em></a>s.</p>
+<p>In <a href="./modding/miniyaml/example.html">the real-world example in chapter 2</a> you can see the
+actor <code>E1</code> defined with the following traits:</p>
+<ul>
+<li><code>Buildable</code></li>
+<li><code>Valued</code></li>
+<li><code>Tooltip</code></li>
+</ul>
+<p>Note that, for example, <code>Queue</code> (in that same example) <em>is not a trait</em>.
+It is a property of the <code>Buildable</code> trait.</p>
+<p><code>Inherits</code> technically isn't a trait, it is a MiniYaml mechanism that is
+explained in the chapter 2 link above.</p>
+<a class="header" href="#traitinfo" id="traitinfo"><h3>TraitInfo</h3></a>
+<p>Technically a trait info is the <em>component</em> part of the
+<a href="https://en.wikipedia.org/wiki/Entity_component_system"><em>entity-component-system</em></a> architecture.</p>
+<p>The properties of a <em>TraitInfo</em> can be set in MiniYaml.</p>
+<p>Look at the linked actor definition and <a href="https://github.com/OpenRA/OpenRA/blob/1d106e71/OpenRA.Mods.Common/Traits/Valued.cs">Valued.cs</a>'s
+<code>ValuedInfo</code> class together.</p>
+<p>Do you see how <code>ValuedInfo</code> has a <code>Cost</code> property that is of type <code>int</code>?</p>
+<p>Now back in the MiniYaml you'll find <code>Cost: 100</code>.</p>
+<p>That node is read by the engine (via the <code>FieldLoader</code> class, which will be
+covered in a future chapter) and the <code>Cost</code> property of <code>ValuedInfo</code> is set to
+<code>100</code>.</p>
+<a class="header" href="#trait" id="trait"><h3>Trait</h3></a>
+<p>Conceptually a trait is simply a characteristic of an <a href="#actor"><em>actor</em></a>.</p>
+<p>Let's look at <a href="https://github.com/OpenRA/OpenRA/blob/1d106e71/OpenRA.Mods.Common/Traits/Valued.cs">Valued.cs</a>, for example, which contains
+two <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/classes"><code>class</code></a>es:</p>
+<ul>
+<li><code>ValuedInfo</code>
+<ul>
+<li>A <a href="#traitinfo"><em>TraitInfo</em></a></li>
+</ul>
+</li>
+<li><code>Valued</code>
+<ul>
+<li>A <em>Trait</em> implementation</li>
+</ul>
+</li>
+</ul>
+<p>Technically a trait is the <em>system</em> part of the
+<a href="https://en.wikipedia.org/wiki/Entity_component_system"><em>entity-component-system</em></a> architecture.</p>
+<p>Systems might:</p>
+<ul>
+<li>hold state (ex. &quot;Current HP is 43&quot;)</li>
+<li>interact with other systems (ex. &quot;I just got healed, play a healing animation&quot;)</li>
+</ul>
+<a class="header" href="#armament" id="armament"><h3>Armament</h3></a>
+<p>This is another word for &quot;weapon.&quot;</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="playing/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="playing/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>A Real-World Example - The OpenRA Book</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="coal">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = "coal";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li class="affix"><a href="../../index.html">Introduction</a></li><li class="affix"><a href="../../glossary.html">Glossary</a></li><li><a href="../../playing/index.html"><strong aria-hidden="true">1.</strong> Playing</a></li><li><ol class="section"><li><a href="../../playing/installing.html"><strong aria-hidden="true">1.1.</strong> Installing OpenRA</a></li><li><a href="../../playing/game-content.html"><strong aria-hidden="true">1.2.</strong> Game Content</a></li><li><a href="../../playing/strategy-guides/index.html"><strong aria-hidden="true">1.3.</strong> Strategy Guides</a></li><li><ol class="section"><li><a href="../../playing/strategy-guides/Tiberian-Dawn.html"><strong aria-hidden="true">1.3.1.</strong> Tiberian Dawn</a></li><li><a href="../../playing/strategy-guides/Dune-2000.html"><strong aria-hidden="true">1.3.2.</strong> Dune 2000</a></li></ol></li></ol></li><li><a href="../../modding/index.html"><strong aria-hidden="true">2.</strong> Modding</a></li><li><ol class="section"><li><a href="../../modding/getting-started.html"><strong aria-hidden="true">2.1.</strong> Getting Started</a></li><li><a href="../../modding/miniyaml/index.html"><strong aria-hidden="true">2.2.</strong> MiniYaml</a></li><li><ol class="section"><li><a href="../../modding/miniyaml/syntax.html"><strong aria-hidden="true">2.2.1.</strong> Syntax Basics</a></li><li><a href="../../modding/miniyaml/example.html" class="active"><strong aria-hidden="true">2.2.2.</strong> A Real-World Example</a></li></ol></li><li><a href="../../modding/map-making/index.html"><strong aria-hidden="true">2.3.</strong> Map Making</a></li><li><ol class="section"><li><a href="../../modding/map-making/editor.html"><strong aria-hidden="true">2.3.1.</strong> Editor</a></li><li><a href="../../modding/map-making/format.html"><strong aria-hidden="true">2.3.2.</strong> Format</a></li><li><a href="../../modding/map-making/custom-rules.html"><strong aria-hidden="true">2.3.3.</strong> Custom Rules</a></li><li><a href="../../modding/map-making/scripting.html"><strong aria-hidden="true">2.3.4.</strong> Scripting</a></li></ol></li><li><a href="../../modding/pngartwork/pngartwork.html"><strong aria-hidden="true">2.4.</strong> Using png artwork</a></li><li><a href="../../modding/campaigns/index.html"><strong aria-hidden="true">2.5.</strong> Campaign Creation</a></li><li><a href="../../modding/utility/index.html"><strong aria-hidden="true">2.6.</strong> Utility</a></li><li><ol class="section"><li><a href="../../modding/utility/linting.html"><strong aria-hidden="true">2.6.1.</strong> Mod &amp; Map Linting</a></li></ol></li></ol></li><li><a href="../../developing/index.html"><strong aria-hidden="true">3.</strong> Developing</a></li><li><ol class="section"><li><a href="../../developing/getting-started/index.html"><strong aria-hidden="true">3.1.</strong> Getting Started</a></li><li><ol class="section"><li><a href="../../developing/getting-started/cloning.html"><strong aria-hidden="true">3.1.1.</strong> Clone The Source Code</a></li><li><a href="../../developing/getting-started/run-ra.html"><strong aria-hidden="true">3.1.2.</strong> Run The Red Alert Mod</a></li></ol></li></ol></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                        </div>
+
+                        <h1 class="menu-title">The OpenRA Book</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#a-real-world-miniyaml-example" id="a-real-world-miniyaml-example"><h1>A Real-World MiniYaml Example</h1></a>
+<p>We'll use <a href="https://github.com/OpenRA/OpenRA/blob/0524a59b/mods/ra/rules/infantry.yaml#L69-L83">part of RA's <code>E1</code> definition in infantry.yaml</a>
+as an example:</p>
+<!--
+TODO: Include & explain inherited node removal _somewhere_
+-->
+<pre><code class="language-yml">E1:
+    Inherits: ^Soldier
+    Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+    Buildable:
+        Queue: Infantry
+    Valued:
+        Cost: 100
+    Tooltip:
+        Name: Rifle Infantry
+</code></pre>
+<p>Immediately, woah!  There is <em>a lot</em> going on here!</p>
+<p>Let's break this down line-by-line.</p>
+<p>This is going to be long but is important to understand.</p>
+<a class="header" href="#line-by-line" id="line-by-line"><h2>Line-By-Line</h2></a>
+<pre><code class="language-yml">E1:
+</code></pre>
+<p>This node is <em>top-level</em> so it does not have a parent.</p>
+<p>Since this node does not have a parent it is defining a new MiniYaml <em>tree</em>
+with an <em>id</em> of <code>E1</code>.</p>
+<hr />
+<pre><code class="language-yml">    Inherits: ^Soldier
+</code></pre>
+<p>This node <em>is indented 1 level more than <code>E1</code></em> so it is a child of the <code>E1</code> node.</p>
+<p><code>Inherits</code> is a special key that indicates that <code>^Soldier</code>'s MiniYaml tree
+should be inserted right where this node is (so this <code>Inherits: ^Solder</code> node
+would be replaced with <code>^Soldier</code>'s tree), effectively merging the two trees.</p>
+<p>Also note that <code>^</code> indicates the referenced definition is a
+template/partial/abstract, meaning it can only be inherited from, not used
+in any other way.</p>
+<p>If that doesn't make sense now that is fine! We will come back to this in a
+future chapter.</p>
+<hr />
+<pre><code class="language-yml">    Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+</code></pre>
+<p>Again we have an <code>Inherits</code> node but this key is a little different, it has:</p>
+<ul>
+<li>an <code>@</code> symbol</li>
+<li>an identifier after the <code>@</code></li>
+</ul>
+<p>The key (pun intended) bit of information here is that MiniYaml trees <em>must
+not</em> have the exact same key at the same indentation level.</p>
+<p>The reason for that restriction is that MiniYaml keys are also hashmap
+(typically called <em>Dictionary</em> in .NET) keys, so they must be unique.</p>
+<p>The <code>@</code> allows us to have multiple of the same child node with a postfixed
+identifier.</p>
+<p>Later on you will see an example of this suffix being used.</p>
+<!--
+    TODO: When will we see `@suffix` being used?
+-->
+<hr />
+<pre><code class="language-yml">    Buildable:
+</code></pre>
+<p>Nothing new is happening with this node.</p>
+<p>It too is indented <em>1 level more than <code>E1</code></em> so is a child of <code>E1</code> and a sibling
+of the two previous <code>Inherits</code> nodes.</p>
+<hr />
+<pre><code class="language-yml">        Queue: Infantry
+</code></pre>
+<p>Can you guess this node?</p>
+<p>I'm sure you figured it out before you even got here!</p>
+<p>It is a child of <code>Buildable</code>, <em>not <code>E1</code></em>, since it is indented 1 level further
+than <code>Buildable</code>.</p>
+<hr />
+<p>At this point the remaining nodes from the example ought to be obvious.</p>
+<blockquote>
+<p><strong>tip</strong> If anything is confusing please reach out on <a href="https://discord.me/openra">Discord</a>!</p>
+</blockquote>
+<a class="header" href="#make-a-change--test-it" id="make-a-change--test-it"><h2>Make A Change &amp; Test It</h2></a>
+<p>Change the <code>Cost</code> node's value (currently <code>100</code>) and see what effect that has
+in-game.</p>
+<p>You've just officially become a modder!</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../modding/miniyaml/syntax.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../modding/map-making/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../../modding/miniyaml/syntax.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../../modding/map-making/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
