@@ -1,24 +1,40 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js">
+<html lang="en" class="sidebar-visible no-js coal">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Tiberian Dawn - The OpenRA Book</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
+        
+        <link rel="icon" href="../../favicon.svg">
+        
+        
         <link rel="shortcut icon" href="../../favicon.png">
+        
         <link rel="stylesheet" href="../../css/variables.css">
         <link rel="stylesheet" href="../../css/general.css">
         <link rel="stylesheet" href="../../css/chrome.css">
+        
         <link rel="stylesheet" href="../../css/print.css" media="print">
+        
 
         <!-- Fonts -->
         <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+        
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        
 
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="../../highlight.css">
@@ -30,11 +46,11 @@
 
         
     </head>
-    <body class="coal">
+    <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "../../";
-            var default_theme = "coal";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "coal";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -56,10 +72,13 @@
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script type="text/javascript">
             var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            document.body.className = theme;
-            document.querySelector('html').className = theme + ' js';
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('coal')
+            html.classList.add(theme);
+            html.classList.add('js');
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
@@ -75,43 +94,62 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="affix"><a href="../../index.html">Introduction</a></li><li class="affix"><a href="../../glossary.html">Glossary</a></li><li><a href="../../playing/index.html"><strong aria-hidden="true">1.</strong> Playing</a></li><li><ol class="section"><li><a href="../../playing/installing.html"><strong aria-hidden="true">1.1.</strong> Installing OpenRA</a></li><li><a href="../../playing/game-content.html"><strong aria-hidden="true">1.2.</strong> Game Content</a></li><li><a href="../../playing/strategy-guides/index.html"><strong aria-hidden="true">1.3.</strong> Strategy Guides</a></li><li><ol class="section"><li><a href="../../playing/strategy-guides/Tiberian-Dawn.html" class="active"><strong aria-hidden="true">1.3.1.</strong> Tiberian Dawn</a></li><li><a href="../../playing/strategy-guides/Dune-2000.html"><strong aria-hidden="true">1.3.2.</strong> Dune 2000</a></li></ol></li></ol></li><li><a href="../../modding/index.html"><strong aria-hidden="true">2.</strong> Modding</a></li><li><ol class="section"><li><a href="../../modding/getting-started.html"><strong aria-hidden="true">2.1.</strong> Getting Started</a></li><li><a href="../../modding/miniyaml/index.html"><strong aria-hidden="true">2.2.</strong> MiniYaml</a></li><li><ol class="section"><li><a href="../../modding/miniyaml/syntax.html"><strong aria-hidden="true">2.2.1.</strong> Syntax Basics</a></li><li><a href="../../modding/miniyaml/example.html"><strong aria-hidden="true">2.2.2.</strong> A Real-World Example</a></li></ol></li><li><a href="../../modding/map-making/index.html"><strong aria-hidden="true">2.3.</strong> Map Making</a></li><li><ol class="section"><li><a href="../../modding/map-making/editor.html"><strong aria-hidden="true">2.3.1.</strong> Editor</a></li><li><a href="../../modding/map-making/format.html"><strong aria-hidden="true">2.3.2.</strong> Format</a></li><li><a href="../../modding/map-making/custom-rules.html"><strong aria-hidden="true">2.3.3.</strong> Custom Rules</a></li><li><a href="../../modding/map-making/scripting.html"><strong aria-hidden="true">2.3.4.</strong> Scripting</a></li></ol></li><li><a href="../../modding/pngartwork/pngartwork.html"><strong aria-hidden="true">2.4.</strong> Using png artwork</a></li><li><a href="../../modding/campaigns/index.html"><strong aria-hidden="true">2.5.</strong> Campaign Creation</a></li><li><a href="../../modding/utility/index.html"><strong aria-hidden="true">2.6.</strong> Utility</a></li><li><ol class="section"><li><a href="../../modding/utility/linting.html"><strong aria-hidden="true">2.6.1.</strong> Mod &amp; Map Linting</a></li></ol></li></ol></li><li><a href="../../developing/index.html"><strong aria-hidden="true">3.</strong> Developing</a></li><li><ol class="section"><li><a href="../../developing/getting-started/index.html"><strong aria-hidden="true">3.1.</strong> Getting Started</a></li><li><ol class="section"><li><a href="../../developing/getting-started/cloning.html"><strong aria-hidden="true">3.1.1.</strong> Clone The Source Code</a></li><li><a href="../../developing/getting-started/run-ra.html"><strong aria-hidden="true">3.1.2.</strong> Run The Red Alert Mod</a></li></ol></li></ol></li></ol>
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="../../glossary.html">Glossary</a></li><li class="chapter-item expanded "><a href="../../playing/index.html"><strong aria-hidden="true">1.</strong> Playing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../playing/installing.html"><strong aria-hidden="true">1.1.</strong> Installing OpenRA</a></li><li class="chapter-item expanded "><a href="../../playing/game-content.html"><strong aria-hidden="true">1.2.</strong> Game Content</a></li><li class="chapter-item expanded "><a href="../../playing/strategy-guides/index.html"><strong aria-hidden="true">1.3.</strong> Strategy Guides</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../playing/strategy-guides/Tiberian-Dawn.html" class="active"><strong aria-hidden="true">1.3.1.</strong> Tiberian Dawn</a></li><li class="chapter-item expanded "><a href="../../playing/strategy-guides/Dune-2000.html"><strong aria-hidden="true">1.3.2.</strong> Dune 2000</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../modding/index.html"><strong aria-hidden="true">2.</strong> Modding</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../modding/getting-started.html"><strong aria-hidden="true">2.1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="../../modding/miniyaml/index.html"><strong aria-hidden="true">2.2.</strong> MiniYaml</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../modding/miniyaml/syntax.html"><strong aria-hidden="true">2.2.1.</strong> Syntax Basics</a></li><li class="chapter-item expanded "><a href="../../modding/miniyaml/example.html"><strong aria-hidden="true">2.2.2.</strong> A Real-World Example</a></li></ol></li><li class="chapter-item expanded "><a href="../../modding/map-making/index.html"><strong aria-hidden="true">2.3.</strong> Map Making</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../modding/map-making/editor.html"><strong aria-hidden="true">2.3.1.</strong> Editor</a></li><li class="chapter-item expanded "><a href="../../modding/map-making/format.html"><strong aria-hidden="true">2.3.2.</strong> Format</a></li><li class="chapter-item expanded "><a href="../../modding/map-making/custom-rules.html"><strong aria-hidden="true">2.3.3.</strong> Custom Rules</a></li><li class="chapter-item expanded "><a href="../../modding/map-making/scripting.html"><strong aria-hidden="true">2.3.4.</strong> Scripting</a></li></ol></li><li class="chapter-item expanded "><a href="../../modding/pngartwork/pngartwork.html"><strong aria-hidden="true">2.4.</strong> Using png artwork</a></li><li class="chapter-item expanded "><a href="../../modding/campaigns/index.html"><strong aria-hidden="true">2.5.</strong> Campaign Creation</a></li><li class="chapter-item expanded "><a href="../../modding/utility/index.html"><strong aria-hidden="true">2.6.</strong> Utility</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../modding/utility/linting.html"><strong aria-hidden="true">2.6.1.</strong> Mod &amp; Map Linting</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../developing/index.html"><strong aria-hidden="true">3.</strong> Developing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../developing/getting-started/index.html"><strong aria-hidden="true">3.1.</strong> Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../developing/getting-started/cloning.html"><strong aria-hidden="true">3.1.1.</strong> Clone The Source Code</a></li><li class="chapter-item expanded "><a href="../../developing/getting-started/run-ra.html"><strong aria-hidden="true">3.1.2.</strong> Run The Red Alert Mod</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
                 
-                <div id="menu-bar" class="menu-bar">
-                    <div id="menu-bar-sticky-container">
-                        <div class="left-buttons">
-                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
-                                <i class="fa fa-bars"></i>
-                            </button>
-                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
-                                <i class="fa fa-paint-brush"></i>
-                            </button>
-                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal (default)</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
-                            </ul>
-                            
-                        </div>
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
 
-                        <h1 class="menu-title">The OpenRA Book</h1> 
+                    <h1 class="menu-title">The OpenRA Book</h1>
 
-                        <div class="right-buttons">
-                            <a href="../../print.html" title="Print this book" aria-label="Print this book">
-                                <i id="print-button" class="fa fa-print"></i>
-                            </a>
-                            
-                        </div>
+                    <div class="right-buttons">
+                        
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
                     </div>
                 </div>
 
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
                 
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
@@ -125,7 +163,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <a class="header" href="#openra-td-mod-newbie-tips" id="openra-td-mod-newbie-tips"><h2>OpenRA TD mod newbie tips:</h2></a>
+                        <h2><a class="header" href="#openra-td-mod-newbie-tips" id="openra-td-mod-newbie-tips">OpenRA TD mod newbie tips:</a></h2>
 <ol>
 <li>
 <p>Every game you play is being recorded. That way you can check later, what other players did and try to copy tactics that worked well. To Access replays, go to Main Menu-&gt;Extras-&gt;Replays</p>
@@ -164,22 +202,22 @@
 <p>Have some patience. TD waiting times can be quite long, depending on the time of the day and other factors. If you have no patience and want &quot;games nao&quot; then you'll probably prefer the RA mod. However this does not mean, you should simply go afk. If you leave for a bit, tell others beforehand. Also, if you're using windows, you can just use Alt+Tab to switch windows and do something else for a while, until a game starts. You'll probably hear lots of beeping, if the people in the chat want your attention.</p>
 </li>
 </ol>
-<a class="header" href="#1-economy" id="1-economy"><h2>1. Economy</h2></a>
-<p>You want to have at least 2 refineries (or 2 harvesters) early in the game in order to be competitive. If you have more money, you can beat your opponent by overwhelming them with units. Generally, at any point in the game, there is a trade-off between expanding your economy, building more units or increasing your tech level.</p>
-<a class="header" href="#2-faction-summaries" id="2-faction-summaries"><h2>2. Faction Summaries</h2></a>
-<a class="header" href="#brotherhood-of-nod" id="brotherhood-of-nod"><h3>Brotherhood of Nod</h3></a>
-<p>Nod adopts hit-and-run tactics, opting for units that are fast, inexpensive or long range. The <strong>Recon Bike</strong> and <strong>Stealth Tank</strong> are the classic examples of this. The <strong>Light Tank</strong> and <strong>Flame tanks</strong> are also relatively fast for tanks, and can outrun GDI's Medium Tank and MLRS (rocket artillery). The Light Tank's maneuverability can allow it to maneuver and shoot and avoid shots a bit better than the slower Medium. The Flame Tank's armor and speed allow it to charge enemy artillery and quickly dispatch them. Nod's <strong>Mobile Artillery</strong> is quite powerful and cheap, but also very slow and dangerous--when it is killed, it has a 75% chance of exploding and doing serious damage to nearby units; if you have many artillery units bunched together, it can cause a catastrophic chain reaction of explosions! Spread them out for best results. Artillery also have a minimum range of 2 and can be killed by units who get very close.</p>
-<p>Nod's end-game unit is the <strong>Chem Warrior</strong>, which is as effective vs. infantry as the <strong>Flamethrower</strong>, but it also effective against armor. It can also walk through tiberium quickly and without taking damage. The flamethrower is significantly more cost- effective than chem warriors against light vehicles and buildings, even though the chems do more damage; the chems have the further advantage of longer range than the flamers. Chem troopers can be deposited into a tiberium field by a <strong>Chinook</strong> transport helicopter and wait for enemy harvesters to show up.</p>
+<h2><a class="header" href="#1-economy" id="1-economy">1. Economy</a></h2>
+<p>You want to have at least 2 refineries (or 2 harvesters) early in the game in order to be competitive. If you have more money, you can beat your opponent by overwhelming them with units. Generally, at any point in the game, there is a trade-off between expanding your economy, building more units or increasing your tech level. </p>
+<h2><a class="header" href="#2-faction-summaries" id="2-faction-summaries">2. Faction Summaries</a></h2>
+<h3><a class="header" href="#brotherhood-of-nod" id="brotherhood-of-nod">Brotherhood of Nod</a></h3>
+<p>Nod adopts hit-and-run tactics, opting for units that are fast, inexpensive or long range. The <strong>Recon Bike</strong> and <strong>Stealth Tank</strong> are the classic examples of this. The <strong>Light Tank</strong> and <strong>Flame tanks</strong> are also relatively fast for tanks, and can outrun GDI's Medium Tank and MLRS (rocket artillery). The Light Tank's maneuverability can allow it to maneuver and shoot and avoid shots a bit better than the slower Medium. The Flame Tank's armor and speed allow it to charge enemy artillery and quickly dispatch them. Nod's <strong>Mobile Artillery</strong> is quite powerful and cheap, but also very slow and dangerous--when it is killed, it has a 75% chance of exploding and doing serious damage to nearby units; if you have many artillery units bunched together, it can cause a catastrophic chain reaction of explosions! Spread them out for best results. Artillery also have a minimum range of 2 and can be killed by units who get very close. </p>
+<p>Nod's end-game unit is the <strong>Chem Warrior</strong>, which is as effective vs. infantry as the <strong>Flamethrower</strong>, but it also effective against armor. It can also walk through tiberium quickly and without taking damage. The flamethrower is significantly more cost- effective than chem warriors against light vehicles and buildings, even though the chems do more damage; the chems have the further advantage of longer range than the flamers. Chem troopers can be deposited into a tiberium field by a <strong>Chinook</strong> transport helicopter and wait for enemy harvesters to show up. </p>
 <p>Nod's end-game support power is the <strong>Nuclear Strike</strong>. It can destroy any building with a direct hit, except for another Temple of Nod. The nuke can also take out nearby buildings and can be quite devastating to a base whose buildings are built closely together. To protect yourself against nukes, build your base with distance between structures; note that this strategy has the trade-off of making your spread-out base a bit harder to defend. Nukes can be used tactically against units, but the nuclear blast takes a while to arrive at its target, and by then units are likely to have moved away.</p>
 <p>Nod's <strong>Apache</strong> helicopter has a powerful machine gun which quickly tears enemy infantry to shreds. It is also quite effective against vehicles and can be used to attack enemy artillery. Its damage against heavy armor is far more modest however and it is not quick at destroying tanks. Used in small packs they are highly effective at harassment and can raid undefended bases quite easily. To defend against air units, Nod has a mobile SAM launcher which is quite powerful and cost-effective against air units (but cannot target ground units).</p>
-<a class="header" href="#global-defense-initative-gdi" id="global-defense-initative-gdi"><h3>Global Defense Initative (GDI)</h3></a>
-<p>GDI's main style is to win with expensive, heavy armor which travel at slow speeds, and with overwhelming firepower. All of GDI's vehicles have relatively high hitpoints for what they are, with the exception of the <strong>Orca</strong> aircraft which is quite fragile. GDI's end-game <strong>Mammoth Tank</strong> is the definition of GDI's style, with its heavy armor, slow speed and firepower combination of dual cannons and missiles. The <strong>MLRS</strong> rocket artillery is also relatively slow (but still mobile) and does powerful damage to vehicles and tanks. In combination, these two units can be difficult to beat. One advantage of the MLRS is that it is faster than Nod's artillery and shoots its missiles faster and more accurately; this at the expense of costing twice as much. This advantage gives it an edge in the battlefield where it can &quot;shoot and scoot&quot; before Nod artillery can counter-attack effectively. It remains vulnerable to rushes from recon bikes, tanks, flame tanks or even nod buggies, so keep your MLRS closely guarded. Your MLRS units also have a minimum range of 3, so they cannot fire at enemies who get too close, making a rapid close-in a choice strategy to kill them, even with weaker units. Getting to point-blank range with an MLRS can also attract fire from nearby MLRS which can kill it.</p>
-<p>Despite GDI's straightforward focus on raw power, it still has a few units which allow it to use more flexible tactics which rely on speed. GDI can use the mobility of the <strong>Armored Personnel Carrier</strong> to transport infantry quickly across the battlefield, especially early-game. GDI's infantry is generally weaker than Nod's, but this mobility advantage can allow GDI to mount impressive attacks. Deploying an APC full of rocket soldiers can give enemy tanks a nasty surprise on the battlefield. Infantry can also be deployed near an enemy's base, allowing quick destruction of an enemy's base by rocket soldiers or grenadiers (latter requires tech up to Communications Center). The APC is GDI's anti-air unit, with an AA gun on its turret. The APC can also be used to rush enemy artillery due to its speed and heavy armor, and its gun which is good against light vehicles.</p>
+<h3><a class="header" href="#global-defense-initative-gdi" id="global-defense-initative-gdi">Global Defense Initative (GDI)</a></h3>
+<p>GDI's main style is to win with expensive, heavy armor which travel at slow speeds, and with overwhelming firepower. All of GDI's vehicles have relatively high hitpoints for what they are, with the exception of the <strong>Orca</strong> aircraft which is quite fragile. GDI's end-game <strong>Mammoth Tank</strong> is the definition of GDI's style, with its heavy armor, slow speed and firepower combination of dual cannons and missiles. The <strong>MLRS</strong> rocket artillery is also relatively slow (but still mobile) and does powerful damage to vehicles and tanks. In combination, these two units can be difficult to beat. One advantage of the MLRS is that it is faster than Nod's artillery and shoots its missiles faster and more accurately; this at the expense of costing twice as much. This advantage gives it an edge in the battlefield where it can &quot;shoot and scoot&quot; before Nod artillery can counter-attack effectively. It remains vulnerable to rushes from recon bikes, tanks, flame tanks or even nod buggies, so keep your MLRS closely guarded. Your MLRS units also have a minimum range of 3, so they cannot fire at enemies who get too close, making a rapid close-in a choice strategy to kill them, even with weaker units. Getting to point-blank range with an MLRS can also attract fire from nearby MLRS which can kill it. </p>
+<p>Despite GDI's straightforward focus on raw power, it still has a few units which allow it to use more flexible tactics which rely on speed. GDI can use the mobility of the <strong>Armored Personnel Carrier</strong> to transport infantry quickly across the battlefield, especially early-game. GDI's infantry is generally weaker than Nod's, but this mobility advantage can allow GDI to mount impressive attacks. Deploying an APC full of rocket soldiers can give enemy tanks a nasty surprise on the battlefield. Infantry can also be deployed near an enemy's base, allowing quick destruction of an enemy's base by rocket soldiers or grenadiers (latter requires tech up to Communications Center). The APC is GDI's anti-air unit, with an AA gun on its turret. The APC can also be used to rush enemy artillery due to its speed and heavy armor, and its gun which is good against light vehicles. </p>
 <p>The end-game <strong>Commando</strong> unit can be quite powerful vs. enemy infantry. It can't hurt vehicles, but it can quickly demolish buildings by planting explosive charges, causing havoc if released in an enemy base by an APC or <strong>Chinook</strong> transport helicopter. If you deposit a few commandos amongst your vehicles, they can keep enemy units at bay with their powerful sniper rifle. But at $1000 each, they do not come cheap, and have to kill several many enemy units to be worth the investment.</p>
-<p>GDI's superweapon is the Ion Cannon, which is unlocked by building an advanced communication center. The ion cannon can instantly destroy a small concentration of troops, or destroy most buildings. It can be used to destroy the enemy's refineries or communications center, but not their vehicle production facilities or top-tier tech buildings.</p>
-<p>GDI's <strong>Orca</strong> aircraft is specialized against vehicles and buildings, and are nearly useless against infantry. While their damage can be impressive, they only have 90 hit-points, far less than the Nod Apache's 125 HP, and should be used for hit-and-run attacks before retreating to safety instead of staying on the battlefield longer than necessary to destroy their target. The Orca differs from GDI's normal style in that they are fast and have light armor, but they are very useful if used wisely. They can be very useful at destroying enemy artillery, flame tanks or tanks that threaten to break through your lines and attack your vulnerable units in the rear. A small group can also be effective at harvester harass or destroying undefended turrets. They are quite vulnerable to anti-air fire from Nod's mobile SAM launcher (which is only half the price of an Orca), GDI's APC, rocket soldiers and recon bikes. End-game units like the Stealth Tank and Mammoth will quickly destroy an Orca with their rockets, and should only be attacked by Orcas if they are distracted while engaging another unit.</p>
-<a class="header" href="#3-airstrikes" id="3-airstrikes"><h2>3. Airstrikes</h2></a>
-<p>Airstrikes are a powerful support power that both factions get, and is unlocked from building the Communications Center and which come available on a 3-minute cycle. They can very effectively destroy large concentrations of infantry, and can destroy some buildings like Guard Towers or Turrets. They can be used to destroy a large incoming force that is threatening your base or to help you attack an enemy base by blowing a hole in their line of turrets/GTs.</p>
+<p>GDI's superweapon is the Ion Cannon, which is unlocked by building an advanced communication center. The ion cannon can instantly destroy a small concentration of troops, or destroy most buildings. It can be used to destroy the enemy's refineries or communications center, but not their vehicle production facilities or top-tier tech buildings. </p>
+<p>GDI's <strong>Orca</strong> aircraft is specialized against vehicles and buildings, and are nearly useless against infantry. While their damage can be impressive, they only have 90 hit-points, far less than the Nod Apache's 125 HP, and should be used for hit-and-run attacks before retreating to safety instead of staying on the battlefield longer than necessary to destroy their target. The Orca differs from GDI's normal style in that they are fast and have light armor, but they are very useful if used wisely. They can be very useful at destroying enemy artillery, flame tanks or tanks that threaten to break through your lines and attack your vulnerable units in the rear. A small group can also be effective at harvester harass or destroying undefended turrets. They are quite vulnerable to anti-air fire from Nod's mobile SAM launcher (which is only half the price of an Orca), GDI's APC, rocket soldiers and recon bikes. End-game units like the Stealth Tank and Mammoth will quickly destroy an Orca with their rockets, and should only be attacked by Orcas if they are distracted while engaging another unit. </p>
+<h2><a class="header" href="#3-airstrikes" id="3-airstrikes">3. Airstrikes</a></h2>
+<p>Airstrikes are a powerful support power that both factions get, and is unlocked from building the Communications Center and which come available on a 3-minute cycle. They can very effectively destroy large concentrations of infantry, and can destroy some buildings like Guard Towers or Turrets. They can be used to destroy a large incoming force that is threatening your base or to help you attack an enemy base by blowing a hole in their line of turrets/GTs. </p>
 
                     </main>
 
@@ -204,13 +242,13 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a href="../../playing/strategy-guides/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../playing/strategy-guides/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a href="../../playing/strategy-guides/Dune-2000.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../../playing/strategy-guides/Dune-2000.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
@@ -224,6 +262,18 @@
 
         
 
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
         
 
         <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
