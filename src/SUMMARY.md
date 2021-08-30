@@ -20,6 +20,7 @@
         - [Format](./modding/map-making/format.md)
         - [Custom Rules](./modding/map-making/custom-rules.md)
         - [Scripting](./modding/map-making/scripting.md)
+    - [Setting default map options on a server](./modding/default-map-options-on-server.md)
     - [Using png artwork](./modding/pngartwork/pngartwork.md)
     - [Campaign Creation](./modding/campaigns/README.md)
     - [Utility](./modding/utility/README.md)
