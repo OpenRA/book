@@ -46,7 +46,7 @@ You are familiar and comfortable with:
 The current vision for this book is to have 3 sections, in the following order:
 
 - [How to play][playing]
-- [How to make games / mods][modding]
+- [How to make maps / games / mods][modding]
 - [How to develop features / how the engine works][developing]
 
 In general, the book assumes that you're reading the section(s) relevant to you
@@ -81,7 +81,7 @@ playing, etc.
   [gh-openra-engine]: https://github.com/OpenRA/OpenRA
   [git-website]: https://git-scm.com/
   [modding-getting-started]: ./modding/getting-startedindex.html
-  [modding]: ./modding/index.html
+  [modding]: ./modding/custom-content.html
   [openra-discord]: https://discord.openra.net
   [openra-reddit]: https://reddit.com/r/openra
   [openra-twitter]: https://twitter.com/openra
